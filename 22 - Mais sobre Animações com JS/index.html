@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animações</title>
+    <style>
+
+        .conteudo {
+            width: 800px;
+            margin: auto;
+        }
+        .conteudo h2 span {
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        .conteudo p {
+            overflow: hidden;
+            height: 10px;
+            transition: 1s;
+        }
+
+        .mostrar {
+            height: 200px !important;
+            transition: 1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="conteudo">
+        <h2>Título do conteúdo <span>Ver Mais!</span></h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet fugit facere officia eius obcaecati veniam iste est maxime doloribus cumque voluptatum doloremque quia, repudiandae dolorum nesciunt vitae expedita soluta veritatis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti similique blanditiis eius quae aspernatur illum vitae provident animi laborum. Sunt explicabo voluptas eligendi. Temporibus nulla ex odio corrupti corporis dolore?</p>
+
+        <script>
+            document.querySelector('.conteudo span').addEventListener('click', function(){
+                document.querySelector('.conteudo p').classList.toggle('mostrar')
+            })
+        </script>
+    </div>
+</body>
+</html>
