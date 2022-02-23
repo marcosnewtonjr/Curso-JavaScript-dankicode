@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora dinâmica</title>
+</head>
+<body>
+    <script>
+        var sinal = prompt('Informe o número de sua operação \n1 - Adição \n2 - Subtração \n3 - Multiplicação \n4 - Divisão \n5 - Resto da divisão \n6 - Potência')
+
+        while (sinal != 1 && sinal != 2 && sinal != 3 && sinal != 4 && sinal != 5 && sinal != 6) {
+            alert('ERRO! Selecione uma opção válida')
+            var sinal = prompt('Informe o número de sua operação \n1 - Adição \n2 - Subtração \n3 - Multiplicação \n4 - Divisão \n5 - Resto da divisão \n6 - Potência')
+        }
+
+        var n1 = Number(prompt('Informe o primeiro número da Operação'))
+        var n2 = Number(prompt('Informe o segundo número da Operação'))
+        var resultado = ''
+        var operação = ''
+
+        if (sinal == 1) {
+
+            resultado = n1 + n2
+            operação = "+"
+
+        } else if (sinal == 2) {
+
+            resultado = n1 - n2
+            operação = "-"
+
+        } else if (sinal == 3) {
+
+            resultado = n1 * n2
+            operação = "x"
+
+        } else if (sinal == 4) {
+
+            resultado = n1 / n2
+            operação = "/"
+
+        } else if (sinal == 5) {
+
+            resultado = n1 % n2
+            operação = "%"
+
+        } else if (sinal == 6) {
+
+            resultado = n1 ** n2
+            operação = "^"
+
+        }
+
+        alert(`O resultado da operação ${n1} ${operação} ${n2} = ${resultado}`)
+        
+    </script>
+</body>
+</html>
