@@ -13,7 +13,7 @@ for (var i = 10; i < 20; i++) {
     console.log(i)
 }
 
-// do - faça enquanto...
+// do - faça enquanto
 
 var x = 20
 
