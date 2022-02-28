@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedra, Papel e Tesoura</title>
+    <style>
+        .playerOptions img, .enemyOptions img {
+            max-width: 200px;
+            cursor: pointer;
+            opacity: 0.3;
+        }
+
+        .playerOptions, .enemyOptions {
+            margin-right: 50px;
+            margin-left: 50px;
+        }
+
+        .aling {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Pedra, papel ou tesoura!</h1><hr>
+    <div class="aling">
+        <div class="playerOptions">
+            <div><img src="images/paper.png" alt=""></div>
+            <div><img src="images/rock.png" alt=""></div>
+            <div><img src="images/scisor.png" alt=""></div>
+        </div>
+        <div class="enemyOptions">
+            <div><img src="images/paper.png" alt=""></div>
+            <div><img src="images/rock.png" alt=""></div>
+            <div><img src="images/scisor.png" alt=""></div>
+        </div>
+    </div>
+
+    <script src="js.js"></script>
+</body>
+</html>
