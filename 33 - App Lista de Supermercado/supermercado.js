@@ -39,3 +39,9 @@ document.querySelector('input[type=submit]').addEventListener('click', () => {
 
     console.log(itens)
 })
+
+document.querySelector('.limpar').addEventListener('click', () => {
+    itens = []
+    document.querySelector('.lista-produtos').innerHTML = ''
+    document.querySelector('.soma-produto h2').innerHTML = 'Total: R$0'
+})
