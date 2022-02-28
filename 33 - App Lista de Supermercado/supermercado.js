@@ -6,7 +6,7 @@ document.querySelector('input[type=submit]').addEventListener('click', () => {
 
     itens.push({
         nome: nomeProduto,
-        valor: valorProduto
+        valor: Number(valorProduto)
     })
 
     /*
@@ -24,6 +24,15 @@ document.querySelector('input[type=submit]').addEventListener('click', () => {
         <p class="price-produto"><span>${valorProduto}</span></p>      
     </div>
     `
+    var soma = 0
+    itens.map(function(val) {
+        soma += val.valor
+    })
+
+    var somaProdutos = document.querySelector('.soma-produto h2')
+
+    somaProdutos.innerHTML = `Total: R$ ${soma}`
+
     document.getElementById('nomeProduto').value = ''
     document.getElementById('nomeProduto').focus()
     document.getElementById('valorProduto').value = ''
