@@ -21,6 +21,10 @@ body {
     font-size: 45px;
 }
 
+.main input {
+    width: 100%;
+}
+
 .pokemon-boxes {
     display: flex;
     flex-wrap: wrap;

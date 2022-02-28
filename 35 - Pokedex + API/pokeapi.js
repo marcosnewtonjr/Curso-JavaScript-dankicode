@@ -1,4 +1,5 @@
-fetch(' https://pokeapi.co/api/v2/pokemon?limit=10')
+function pegaPokemons(quantidade) {
+    fetch(' https://pokeapi.co/api/v2/pokemon?limit='+quantidade)
     .then(response => response.json())
     .then(allpokemon => {
 
@@ -10,21 +11,38 @@ fetch(' https://pokeapi.co/api/v2/pokemon?limit=10')
                 .then(response => response.json())
                 .then(pokemonSingle => {
                     
-                pokemons.push({nome:val.name,imagem:pokemonSingle.sprites.front_default})
+                    pokemons.push({nome:val.name,imagem:pokemonSingle.sprites.front_default})
 
-                if(pokemons.length == 10) {
-                    console.log(pokemons)
-                }
+                    if(pokemons.length == quantidade) {
 
-                /*
-                <div class="pokemon-box">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png" alt="Imagem Pokemon">
-                <p>Dito</p>
-                </div>
-             */
+                        var pokemonBoxes = document.querySelector('.pokemon-boxes')
+                        pokemonBoxes.innerHTML = ''
+                        
+                        pokemons.map(function(val) {
+                            
+                            pokemonBoxes.innerHTML += `
+                            
+                            <div class="pokemon-box">
+                            <img src="${val.imagem}" alt="Imagem Pokemon">
+                            <p>${val.nome}</p>
+                            </div>
+
+                            `
+
+                        })
+
+                    }             
 
                 })
 
         })
         
     })
+}
+
+
+
+var quantidade = document.getElementById('quantidade')
+quantidade.addEventListener('change',() => {
+    pegaPokemons(quantidade.value)
+})
